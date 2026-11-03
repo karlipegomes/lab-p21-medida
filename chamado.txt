@@ -1,1 +1,1 @@
-medida-F-buildx-sem-platforms
+medida-G-sem-permissions-repo-read

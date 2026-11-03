@@ -4,10 +4,6 @@ on:
   push:
     branches: [main]
 
-permissions:
-  contents: read
-  packages: write
-
 jobs:
   publicar:
     runs-on: ubuntu-latest
@@ -29,6 +25,7 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: .
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.img.outputs.nome }}:${{ github.sha }}
           build-args: |
