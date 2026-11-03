@@ -33,6 +33,4 @@ jobs:
           push: true
           tags: ${{ steps.img.outputs.nome }}:${{ github.sha }}
           build-args: |
-            VERSAO=1.0.0
-          labels: |
-            org.opencontainers.image.revision=${{ github.sha }}
+            VERSAO=${{ github.sha }}
