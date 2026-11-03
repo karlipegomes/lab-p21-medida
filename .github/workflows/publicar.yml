@@ -31,7 +31,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.img.outputs.nome }}:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
           build-args: |
             VERSAO=${{ github.sha }}
           labels: |
