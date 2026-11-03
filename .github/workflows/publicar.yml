@@ -34,3 +34,5 @@ jobs:
           tags: ${{ steps.img.outputs.nome }}:${{ github.sha }}
           build-args: |
             VERSAO=${{ github.sha }}
+          labels: |
+            org.opencontainers.image.revision=${{ github.sha }}
